@@ -1,0 +1,13 @@
+{
+  "name": "agent-rules-gen",
+  "version": "0.1.0",
+  "description": "Generate AGENTS.md and CLAUDE.md from one Markdown rules source",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "bin": { "agent-rules-gen": "./bin/agent-rules-gen.js" },
+  "files": ["lib", "bin", "test", "examples", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test \"test/*.test.js\"" },
+  "engines": { "node": ">=22" },
+  "license": "MIT",
+  "keywords": ["agents", "rules", "markdown", "code-generation"]
+}
