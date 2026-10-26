@@ -1,0 +1,26 @@
+{
+  "name": "hookify-encoding-lint",
+  "version": "0.1.0",
+  "description": "Offline encoding lint and conservative regex fixes for hookify rule files",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": "./index.mjs",
+  "bin": {
+    "hookify-encoding-lint": "./cli.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "cli.mjs",
+    "reproduce.py",
+    "test",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/hookify-encoding-lint.test.mjs test/reproduction.test.mjs test/scalar-whitespace.test.mjs"
+  },
+  "keywords": ["hookify", "encoding", "lint", "windows", "regex"]
+}
