@@ -1,0 +1,13 @@
+{
+  "name": "prompt-covers-schema",
+  "version": "0.1.0",
+  "description": "Find JSON Schema vocabulary missing from model instructions.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "exports": "./index.mjs",
+  "bin": { "prompt-covers-schema": "./cli.mjs" },
+  "files": ["index.mjs", "cli.mjs", "README.md", "LICENSE", "examples"],
+  "scripts": { "test": "node --test test/prompt-covers-schema.test.mjs" },
+  "keywords": ["json-schema", "prompt", "validation", "cli"]
+}

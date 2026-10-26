@@ -1,0 +1,6 @@
+state
+pass
+fail
+skip
+marker
+END

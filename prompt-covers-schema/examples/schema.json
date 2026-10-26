@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "required": ["state", "marker"],
+  "properties": {
+    "state": { "$ref": "#/$defs/state" },
+    "marker": { "const": "END" },
+    "code": { "type": "string", "pattern": "^[A-Z]{3}$" }
+  },
+  "$defs": { "state": { "enum": ["pass", "fail", "skip"] } }
+}
