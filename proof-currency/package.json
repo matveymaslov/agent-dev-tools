@@ -1,0 +1,12 @@
+{
+  "name": "proof-currency",
+  "version": "0.1.0",
+  "description": "Check whether recorded Git proof commits still describe covered paths.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "exports": "./index.mjs",
+  "bin": { "proof-currency": "./bin/proof-currency.mjs" },
+  "files": ["index.mjs", "lib", "bin", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/proof-currency.test.mjs" }
+}
