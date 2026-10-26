@@ -1,0 +1,13 @@
+{
+  "name": "flaky-evidence",
+  "version": "0.1.0",
+  "description": "Preserve a failing command, measure resource pressure, and explain reruns with evidence.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "flaky-evidence": "./cli.mjs" },
+  "exports": "./index.mjs",
+  "files": ["index.mjs", "cli.mjs", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/flaky-evidence.test.mjs test/edge-cases.test.mjs" },
+  "keywords": ["testing", "flaky", "evidence", "diagnostics"]
+}
