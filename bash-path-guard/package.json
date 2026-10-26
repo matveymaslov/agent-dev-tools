@@ -1,0 +1,31 @@
+{
+  "name": "bash-path-guard",
+  "version": "0.1.0",
+  "description": "Catch Windows path quoting damage before Bash runs, and lint damaged config paths.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "bash-path-guard": "bin/bash-path-guard.mjs"
+  },
+  "exports": {
+    ".": "./lib/guard.mjs",
+    "./lint": "./lib/lint.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "test/bash-path-guard.test.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/bash-path-guard.test.mjs"
+  },
+  "keywords": ["bash", "git-bash", "windows", "claude-code", "hooks", "lint"],
+  "publishConfig": {
+    "access": "public"
+  }
+}
