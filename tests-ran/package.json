@@ -1,0 +1,14 @@
+{
+  "name": "tests-ran",
+  "version": "0.1.0",
+  "description": "Require evidence that tests actually ran before accepting a test command's exit code.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "tests-ran": "./bin/tests-ran.mjs" },
+  "exports": "./lib/index.mjs",
+  "files": ["bin", "lib", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/tests-ran.test.mjs" },
+  "keywords": ["test", "ci", "tap", "junit", "jest", "vitest"],
+  "publishConfig": { "access": "public" }
+}
