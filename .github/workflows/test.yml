@@ -1,0 +1,64 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+
+      # Each tool is a separate package with its own tests. Only vitest-loud-json
+      # has a dependency (vitest, pinned by its lockfile); the others need none.
+      - name: agent-rules-gen
+        working-directory: agent-rules-gen
+        run: npm test
+      - name: bash-path-guard
+        working-directory: bash-path-guard
+        run: npm test
+      - name: flaky-evidence
+        working-directory: flaky-evidence
+        run: npm test
+      - name: hook-entry-by-shape
+        working-directory: hook-entry-by-shape
+        run: npm test
+      - name: hookify-encoding-lint
+        working-directory: hookify-encoding-lint
+        run: npm test
+      - name: memory-index-lint
+        working-directory: memory-index-lint
+        run: npm test
+      - name: prompt-covers-schema
+        working-directory: prompt-covers-schema
+        run: npm test
+      - name: proof-currency
+        working-directory: proof-currency
+        run: npm test
+      - name: tests-ran
+        working-directory: tests-ran
+        run: npm test
+      - name: vitest-loud-json
+        working-directory: vitest-loud-json
+        run: |
+          npm ci --ignore-scripts
+          npm test
+      - name: wait-for-line
+        working-directory: wait-for-line
+        run: npm test

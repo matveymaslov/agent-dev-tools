@@ -1,0 +1,12 @@
+node_modules/
+*.tgz
+*.log
+
+# Temporary and run output left by tests or by trying the tools
+.runs/
+.test-tmp/
+.test */
+.tmp-*/
+demo/
+example-run/
+flaky-evidence-*.json

@@ -1,0 +1,3 @@
+# Keep every file LF on all systems, so byte-exact tests behave the same on Windows
+# runners that default to CRLF checkouts. Tests that need CRLF create it themselves.
+* text=auto eol=lf
