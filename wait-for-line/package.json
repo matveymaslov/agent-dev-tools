@@ -1,0 +1,12 @@
+{
+  "name": "wait-for-line",
+  "version": "0.1.0",
+  "description": "Wait for a new complete log line after arming, with polling and rotation recovery.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "exports": "./index.mjs",
+  "bin": { "wait-for-line": "./bin/wait-for-line.mjs" },
+  "files": ["index.mjs", "bin", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/wait-for-line.test.mjs" }
+}
