@@ -1,0 +1,12 @@
+{
+  "name": "memory-index-lint",
+  "version": "0.1.0",
+  "description": "Check and archive a bounded Markdown memory index without dependencies",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": { "memory-index-lint": "bin/cli.cjs" },
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test index.js" },
+  "files": ["bin/", "lib/", "README.md", "LICENSE"],
+  "keywords": ["claude-code", "memory", "markdown", "lint"]
+}
