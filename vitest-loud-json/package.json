@@ -1,0 +1,17 @@
+{
+  "name": "vitest-loud-json",
+  "version": "0.1.0",
+  "description": "Make unhandled Vitest errors visible beside the JSON reporter",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./reporter.mjs",
+    "./check": "./check.mjs"
+  },
+  "bin": { "vitest-loud-json-check": "./check.mjs" },
+  "files": ["reporter.mjs", "check.mjs", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test index.js" },
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "peerDependencies": { "vitest": ">=4.1.10 <5" },
+  "devDependencies": { "vitest": "4.1.10" }
+}
