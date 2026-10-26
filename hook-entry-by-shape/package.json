@@ -1,0 +1,13 @@
+{
+  "name": "hook-entry-by-shape",
+  "version": "0.1.0",
+  "description": "Idempotent Claude Code hook installation without marker keys",
+  "type": "module",
+  "exports": "./index.js",
+  "bin": { "hook-entry-by-shape": "cli.js" },
+  "files": ["index.js", "cli.js", "lib", "test", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test \"test/*.test.js\"" },
+  "engines": { "node": ">=22" },
+  "license": "MIT",
+  "keywords": ["claude-code", "hooks", "settings", "idempotent"]
+}
