@@ -27,11 +27,17 @@ jobs:
 
       # Each tool is a separate package with its own tests. Only vitest-loud-json
       # has a dependency (vitest, pinned by its lockfile); the others need none.
+      - name: added-lines-scan
+        working-directory: added-lines-scan
+        run: npm test
       - name: agent-rules-gen
         working-directory: agent-rules-gen
         run: npm test
       - name: bash-path-guard
         working-directory: bash-path-guard
+        run: npm test
+      - name: diagnosis-needs-evidence
+        working-directory: diagnosis-needs-evidence
         run: npm test
       - name: flaky-evidence
         working-directory: flaky-evidence
