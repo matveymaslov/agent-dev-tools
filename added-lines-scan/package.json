@@ -1,0 +1,14 @@
+{
+  "name": "added-lines-scan",
+  "version": "0.1.0",
+  "description": "Scan the lines added by every commit in a git range for forbidden markers, before a push.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "added-lines-scan": "./bin/added-lines-scan.mjs" },
+  "exports": "./lib/index.mjs",
+  "files": ["bin", "lib", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/added-lines-scan.test.mjs" },
+  "keywords": ["git", "pre-push", "leak", "scan", "hooks", "agents"],
+  "publishConfig": { "access": "public" }
+}

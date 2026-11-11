@@ -9,8 +9,10 @@ a dependency (Vitest).
 
 | Tool | What it does | Status |
 | --- | --- | --- |
+| [added-lines-scan](added-lines-scan) | Scans the lines added by every commit in a git range for forbidden markers, so a leak that a later commit removed is still caught before a push. | 0.1.0 · 40 tests pass, 1 skipped on Windows |
 | [agent-rules-gen](agent-rules-gen) | Generates `AGENTS.md` and `CLAUDE.md` from one Markdown rules source and checks them for drift. | 0.1.0 · 47 tests pass |
 | [bash-path-guard](bash-path-guard) | Claude Code hook that blocks Bash commands whose unquoted Windows paths would lose their backslashes; also lints config files for paths already damaged that way. | 0.1.0 · 35 tests pass |
+| [diagnosis-needs-evidence](diagnosis-needs-evidence) | Claude Code hook that refuses a work-journal entry which names a cause with neither a `file:line` reference nor a guess mark. | 0.1.0 · 83 tests pass |
 | [flaky-evidence](flaky-evidence) | Reruns a failing command, keeps the first failure's output, and records resource readings taken before each attempt to say whether machine pressure could explain a later pass. | 0.1.0 · 27 tests pass |
 | [hook-entry-by-shape](hook-entry-by-shape) | Installs a Claude Code hook exactly once by matching its event, matcher, program and script path instead of a marker key; keeps a separate backup per write. | 0.1.0 · 28 tests pass, 2 skipped on Windows |
 | [hookify-encoding-lint](hookify-encoding-lint) | Lints hookify rule files for non-ASCII text that breaks loading under a non-UTF-8 default encoding, and conservatively rewrites regex patterns to ASCII escapes. | 0.1.0 · 31 tests pass |
@@ -39,7 +41,8 @@ node wait-for-line/bin/wait-for-line.mjs --file run.log --pattern '^DONE$' --tim
 
 Most tools need Node.js 22 or newer; `hookify-encoding-lint`, `prompt-covers-schema`
 and `vitest-loud-json` declare older minimums in their `package.json` (not covered by
-the CI matrix), and `proof-currency` also needs Git 2.43 or newer.
+the CI matrix), `proof-currency` also needs Git 2.43 or newer, and `added-lines-scan`
+needs Git on PATH (it was run against Git 2.53).
 
 ## Tests
 
