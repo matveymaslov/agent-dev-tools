@@ -1,0 +1,14 @@
+{
+  "name": "diagnosis-needs-evidence",
+  "version": "0.1.0",
+  "description": "Claude Code hook that refuses a journal entry naming a cause with no file:line reference and no guess mark.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "diagnosis-needs-evidence": "./bin/diagnosis-needs-evidence.mjs" },
+  "exports": "./lib/index.mjs",
+  "files": ["bin", "lib", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/diagnosis-needs-evidence.test.mjs" },
+  "keywords": ["claude-code", "hooks", "agents", "journal", "evidence"],
+  "publishConfig": { "access": "public" }
+}
